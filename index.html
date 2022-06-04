@@ -5,16 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>FCC Technical Documentation Project</title>
 </head>
 <body>
+    <nav id="nav-bar">
+        <header><h1>Relational Database Documentation</h1>
+        <h5>Goldac77</h5></header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#what_you_Need" class="nav-link">What you Need</a>
+        <a href="#Relational_database" class="nav-link">Relational database</a>
+        <a href="#SQL" class="nav-link">SQL</a>
+        <a href="#SQL_Vs_MySQL" class="nav-link">SQL Vs MySQL</a>
+        <a href="#Database_Normalization" class="nav-link">Database Normalization</a>
+        <a href="#Creating_a_database" class="nav-link">Creating a database</a>
+        <a href="#Creating_a_table" class="nav-link">Creating a table</a>
+        <a href="#Select_item_from_table" class="nav-link">Select item from table</a>
+        <a href="#Alter_item_in_a_table" class="nav-link">Alter item in a table</a>
+    </nav>
     <main id="main-doc">
         <section class="main-section" id="Introduction">
             <header><h1>Introduction</h1></header>
             <p>Databases are a brilliant and easy way to keep track and store data, most suitably, large
                 volumes of data.There are many types of databases, and they include:
-                <ol>
-                    <li>Relatonal Database</li>
+                <ul>
+                    <li>Relational Database</li>
                     <li>NoSQL Database</li>
                     <li>Cloud Database</li>
                     <li>Columnar Database</li>
@@ -25,15 +39,15 @@
                     <li>Document Database</li>
                     <li>Graph Database</li>
                     <li>Time series Database</li>
-                </ol>
+                </ul>
                 Storing and organizing data in a databases, follows many rules, which often depend on
                 the type of Database Management System (DBMS) being used, and the type of data being
                 stored. This [mock] documentation will cover the MySQL Database using SQL
             </p>
         </section>
-        <section class="main-section" id="what_you_need">
+        <section class="main-section" id="what_you_Need">
             <header><h1>What you Need</h1></header>
-            <p>There are no prequesites for learning about Databases or MySQL/SQL.
+            <p>There are no perquisites for learning about Databases or MySQL/SQL.
                 To be able to practice, it is recommended to download and install the
                 <a href="https://dev.mysql.com/downloads/installer/">MySQL Installer</a>.
                 The complete MySQL Workbench Documentation can be found <a href="https://dev.mysql.com/doc/workbench/en/">here</a>, and here's
@@ -42,8 +56,154 @@
             </p>
         </section>
         <section class="main-section" id="Relational_database">
-            <header><h1>Relational Database</h1></header>
+            <header><h1>Relational database</h1></header>
+            <p>Relational databases are a type of database that stores and provides access to
+                data points that are related to one another, or hold similar type of data.
+                Relational databases hold data in tables, with rows holding a collection of similar, or
+                related values, and columns holding data of a particular type, or attribute. Relational
+                databases make use of keys to uniquely identify each row. 
+            </p>
+        </section>
+        <section class="main-section" id="SQL">
+            <header><h1>SQL</h1></header>
+            <p>Structured Query Language (SQL) is the standard programming language used to manipulate data
+                in relational databases. It is used in databases such as MySQL, SQL Server, MS Access, Oracle, Sybase,
+                Informix, etc.
+            </p>
+        </section>
+        <section class="main-section" id="SQL_Vs_MySQL">
+            <header><h1>SQL Vs MySQL</h1></header>
+            <p>SQL is the programming language that is used to manipulate data in 
+                relational databases, while MySQL is the relational database management
+                system that makes use of SQL. Below are some differences sourced from 
+                <a href="https://www.simplilearn.com/tutorials/sql-tutorial/difference-between-sql-and-mysql#:~:text=SQL%20is%20a%20query%20programming,data%20in%20an%20organized%20way.">here</a>
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <td>SQL</td>
+                        <td>MySQL</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SQL is a query programming language that manages RDBMS</td>
+                        <td>MySQL is a relational database management system that uses SQL</td>
+                    </tr>
+                    <tr>
+                        <td>SQL is primarily used to query and operate database systems</td>
+                        <td>MySQL allows you to handle, store, modify and delete data and store data in an organized way</td>
+                    </tr>
+                    <tr>
+                        <td>SQL does not support any connector</td>
+                        <td>MySQL comes with an in-built tool known as MySQL Workbench that facilitates creating, designing, and building databases</td>
+                    </tr>
+                    <tr>
+                        <td>SQL follows a simple standard format without many or regular updates</td>
+                        <td>MySQL has numerous variants and gets frequent updates</td>
+                    </tr>
+                    <tr>
+                        <td>SQL supports only a single storage engine</td>
+                        <td>MySQL offers support for multiple storage engines along with plug-in storage, making it more flexible</td>
+                    </tr>
+                    <tr>
+                        <td>SQL does not allow other processors or even its own binaries to manipulate data during execution</td>
+                        <td>MySQL is less secure than SQL, as it allows third-party processors to manipulate data files during execution</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="main-section" id="Database_Normalization">
+            <header><h1>Database Normalization</h1></header>
+            <p>Database Normalization is a design technique the ensures, there databases are organized
+                to avoid data redundancy and database anomalies (insertion anomaly, update anomaly, and deletion anomaly)
+                <br>
+                Database Normalization comes in 6 forms:
+                <ul>
+                    <li><a href="https://www.studytonight.com/dbms/first-normal-form.php">1st Normal Form</a></li>
+                    <li><a href="https://www.studytonight.com/dbms/second-normal-form.php">2nd Normal Form</a></li>
+                    <li><a href="https://www.studytonight.com/dbms/third-normal-form.php">3rd Normal Form</a></li>
+                    <li><a href="https://www.studytonight.com/dbms/boyce-codd-normal-form.php">Boyce-Codd Normal Form (BCNF)</a></li>
+                    <li><a href="https://www.studytonight.com/dbms/fourth-normal-form.php">4th Normal Form</a></li>
+                    <li><a href="https://www.studytonight.com/dbms/fifth-normal-form.php">Fifth Normal Form</a></li>
+                </ul>
+                Database Normalization often involves split a database into multiple tables, with defined
+                relations achieve the above mentioned results
+            </p>
+        </section>
+        <section class="main-section" id="Creating_a_database">
+            <header><h1>Creating a database</h1></header>
+            <p>The code snippet is used to create a database</p>
+            <code>CREATE DATABASE ^database_name</code> <br>
+            <p>This is used to delete a database</p>
+            <code>DROP DATABASE ^database_name</code>
+            <p><strong><i>^database_name</i></strong> refers to the name of your database to be created or deleted (pretty self-explanatory)</p>
+        </section>
+
+        <section class="main-section" id="Creating_a_table">
+            <header><h1>Creating a table</h1></header>
+            <p>Within a database are many tables that hold specific data
+                The code snippet is used to create a table
+            </p>
+            <code>CREATE TABLE ^table_name</code> <br>
+            <p>This is used to delete a table</p>
+            <code>DROP TABLE ^table_name</code>
+            <p><strong><i>^table_name</i></strong> refers to the name of the table to be created or deleted</p>
+        </section>
+
+        <section class="main-section" id="Select_item_from_table">
+            <header><h1>Select item from table</h1></header>
+            <p>There are many ways to select an item from a table, depending on how
+                the data is organized, and the type of data to be selected. Below are
+                a few examples:
+            </p>
+
+            <ul>
+                <li>Using <code>SELECT</code> <br>
+                    <p>Select items from a specified column(s) in a table</p>
+                    <code>
+                        SELECT ^column1, column2,... <br>
+                        FROM ^table_name
+                    </code> <br>
+                </li>
+                <li>
+                    <p>Select all the items in the specified table</p>
+                    <code>
+                        SELECT * FROM ^table_name
+                    </code> <br>
+                </li>
+            </ul>
+            <p>The <code>SELECT</code> keyword is used with other conditionals to 
+                allow for more precision in data retrieval. Find how this is used at
+                <a href="https://www.w3schools.com/mysql/mysql_where.asp">w3schools</a> 
+            </p>
+        </section>
+        <section class="main-section" id="Alter_item_in_a_table">
+            <header><h1>Alter item in a table</h1></header>
+            <p>These are the statements that are used when updating, or 
+                altering entries in a database: <br>
+                <code>INSERT</code><br>
+                <code>UPDATE</code><br>
+                <code>DELETE</code><br>
+
+                For more details, check <a href="https://www.w3schools.com/mysql/mysql_insert.asp">w3schools</a>
+            </p>
+        </section>
+        <section class="main-section" id="References">
+            <header><h1>References</h1></header>
+            <p>To find detailed notes, explanations and examples, check the following sites:</p>
+            <ul>
+                <li><a href="https://beginnersbook.com/2015/04/dbms-tutorial/">Beginner's Book/DBMS Tutorial</a></li>
+                <li><a href="https://www.w3schools.com/mysql/default.asp">w3schools/MySQL Tutorial</a></li>
+                <li><a href="https://www.w3schools.in/dbms">w3schools/DBMS Tutorial</a></li>
+            </ul>
         </section>
     </main>
+    <footer>
+        <strong>DISCLAIMER: This a mock technical documentation page, and not very technical at that; it 
+            is not meant to go into details on the topic discussed.
+            This page is meant to pass all tests on a FCC project and may be used as a quick revision or guide
+        </strong>
+    </footer>
 </body>
 </html>
