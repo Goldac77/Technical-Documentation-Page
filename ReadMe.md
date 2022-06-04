@@ -11,5 +11,9 @@
     <li>Alter Item in table</li>
 </ul>
 
-<h2>This is a mock documentation, and does not cover the topics in full. For better understanding,
-head over to <!--insert website--></h2>
+<strong>
+This a mock technical documentation page, and not very technical at that; it <br>
+is not meant to go into details on the topic discussed. <br>
+This page is meant to pass all tests on a FCC project and may be used as a quick revision or guide <br>
+Lastly, this project does not focus on responsiveness
+</strong>
