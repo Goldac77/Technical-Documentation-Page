@@ -80,3 +80,24 @@ td {
     border-color: #ccc;
     padding: 5px;
 }
+
+
+/*Styling for dark mode users*/
+@media (prefers-color-scheme: dark) {
+    *{
+        color: #eee;
+        background-color: #1B1B1B;
+    }
+
+    code {
+        background-color: #343434;
+    }
+
+    a {
+        color: #1B4ECC;
+    }
+
+    nav a:hover {
+        background-color: #1B4ECC;
+    }
+}
